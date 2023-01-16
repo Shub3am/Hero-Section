@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Kaushan Script", cursive;
+}
+body {
+  background: #141010;
+}
+
+.main-div {
+  /* background: #141010; Only Enable If you are using this as standalone Section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  animation: Main-Section-Fade-In 1s;
+}
+
+@keyframes Main-Section-Fade-In {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.main-div h1 {
+  background: linear-gradient(60deg, #e21143, #ffb03a);
+  color: transparent;
+  -webkit-background-clip: text;
+  font-size: 8em;
+  animation: text-fade-in 1s backwards;
+  animation: background-c 1s infinite;
+}
+
+@keyframes text-fade-in {
+  0% {
+    opacity: 0;
+    font-size: 6em;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.loader {
+  margin-top: 10em;
+  width: 5em;
+  height: 5em;
+  border: 5px solid #ffb03a;
+  border-radius: 50%;
+  border-left-color: #e21143;
+  animation: load-animation 2s infinite;
+}
+
+@keyframes load-animation {
+  0% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/*  Responsiveness */
+@media screen and (max-width: 1400px) {
+  .main-div h1 {
+    font-size: 7vw;
+    text-align: center;
+  }
+  .loader {
+    width: 10vw;
+    height: 10vw;
+    margin-top: 7vh;
+  }
+}
