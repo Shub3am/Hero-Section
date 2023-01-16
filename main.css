@@ -34,7 +34,6 @@ body {
   -webkit-background-clip: text;
   font-size: 8em;
   animation: text-fade-in 1s backwards;
-  animation: background-c 1s infinite;
 }
 
 @keyframes text-fade-in {
